@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sushrut Kumar's Research</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <!-- Bootstrap -->
+            <link href="../css/bootstrap.css" rel="stylesheet" media="screen">
+            <link href="../css/style.css" rel="stylesheet">
+            <link rel="stylesheet" href="../academicons-1.8.6/css/academicons.css"/>
+            <script src="https://kit.fontawesome.com/60848b8342.js" crossorigin="anonymous"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+            <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+            <link rel="shortcut icon" type="images/png" href="../images/research.png">
+            <meta charset="utf-8" />
+            <!-- <style>
+                ::-moz-selection { /* Code for Firefox */
+                  color: white;
+                  background: #3f4041;
+                }
+    
+                ::selection {
+                  color: white;
+                  background: #3f4041;
+                }
+                </style> -->
+    </head>
+
+    <body>
+        <div class="scroll-line"></div>
+        <nav class="navbar navbar-expand-xl navbar-dark bg-nav-dark justify-content-end">
+            <div class="container-fluid"> <!-- Container-fluid is necessary for mobile viewing and never change xl to sm | lg etc-->
+                <a class="navbar-brand cool-link" href="../index.html" mb-0>SUSHRUT KUMAR</a>
+                <button class="navbar-toggler first-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <div class="animated-icon1"><span></span><span></span><span></span></div>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav navbar-nav ml-auto text-center">
+                    <li class="nav-item">
+                        <a class="nav-link cool-link" href="../index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link cool-link" href="../research.html">RESEARCH<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link cool-link" href="../cv.html">RESUME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link cool-link" href="../publications.html">PUBLICATIONS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link cool-link" href="../talks.html">TALKS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link cool-link" href="../useful.html">USEFUL LINKS</a>
+                    </li>
+                </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container text-justify">
+            <center><h2>Fluid Mechanics Group<br>Delhi Technological University</h2><hr class="star-light"></center>
+            The Fluid Mechanics Group is headed by Prof. Raj Kumar Singh, Department of Mechanical Engineering, Delhi Technological University. Our research group uses theoretical, computational, and experimental methods to investigate and analyze the fluid flow of various types.<br><br>
+
+            <h3><u>Projects</u></h3><br>
+            <ul>
+                <li>
+                    <b>A Quantitative Analysis of Machine Learning based Regressors for Pressure Reconstruction in Particle Image Velocimetry Applications</b><br><br>
+                    Collaborator - <a href="https://www.linkedin.com/in/manan-basu-a13a16151/" target="_blank">Manan Basu</a>, <a href="https://www.linkedin.com/in/priyam-gupta-prsc14/" target="_blank">Priyam Gupta</a>, <a href="https://www.linkedin.com/in/tript-sharma/" target="_blank">Tript Sharma</a><br>
+                    Particle Image Velocimetry (PIV) is an experimental method of flow visualization that establishes instantaneous velocity fields. It provides a highly accurate spatial and temporal resolution of flow characteristics compared to other conventional fluid measurement and visualization techniques. However, certain limitations are encountered, particularly due to noise that corrupts the high-resolution measurements. The instantaneous velocity fields obtained from PIV is used to evaluate pressure with the help of Navier-Stokes equations. The pressure evaluated using this method involves complex algorithms and depends highly on velocity fields, which is prone to experimental noises. With the recent developments in Artificial Intelligence, Machine Learning (ML) techniques are being used for many engineering applications. In the proposed work, we have developed a computational framework incorporating three regressors i.e., Support Vector Regressors (SVRs), Regression-Artificial Neural Networks (R-ANN), and Bayesian Networks to infer the pressure fields for incompressible fluids by training on standard datasets. The training was performed on attributes identified by feature engineering of the fluid properties. The error between the converging prediction and expected pressure fields were recorded for these regressors along with the numerically evaluated pressure. These techniques have shown reduced complexity and computation as well as overcome the drawbacks of the conventional methods.
+                    <br><br>
+                    <center><img src="../images/ML_valid.jpeg" style="width: 60%; height: auto;"><figcaption style="font-size: 14px;">Fig. Validation of output from best performing machine learning based regression model</figcaption></center>
+                    <br><br>
+                </li>
+                
+                <li>
+                    <b>Enhancement of Airfoil Slat Configuration using Invasive Weed Optimization framework coupled with Artificial Neural Networks</b><br><br>
+                    Collaborator - <a href="https://www.linkedin.com/in/priyam-gupta-prsc14/" target="_blank">Priyam Gupta</a><br>
+                    This research attempts to develop an optimization scheme by integrating the Genetic Algorithm and Artificial Neural Network (ANN) - the surrogate model, which was successfully implemented to optimize Leading Edge Slat shape and configuration. The optimization model used Invasive Weed Optimization. Bezier curves were used as an aerodynamic shape parameterization method to ensure the generation of smooth-contoured slat profiles. Geometry, Overhang, Depth, and Deflection were taken as the defining parameters for each individual. These parameters were varied within a range which is 3.4% to 15% of slat chord for Overhang, -5% to 4% of slat chord for Depth, -5% to 5% of initial deflection for Deflection and the ordinate of shape control points had a variation of y+3 to y-3. The standard deviation decreases non linearly from 6 to 0.005 with a modulation index of 3. Multiple Computational Fluid Dynamics simulations were run for each individual under various operating conditions to evaluate their fitness (lift to drag ratio). The data generated from this process was used as training and test sets for the ANN. Shape control points, angle of attack, Reynolds number, and operating conditions were taken as input parameters for the neural network to predict lift to drag ratio. The developed technique showed approximately 85% improvement in the time taken and allowed the algorithm to better explore design space.<br><br>
+                </li>
+
+                <li>
+                    <b>A Natural Evolution based Numerical Optimisation framework to enhance Airfoil-Slat Arrangement ​​</b><br><br>
+                    Collaborator - <a href="https://www.linkedin.com/in/priyam-gupta-prsc14/" target="_blank">Priyam Gupta</a><br>
+                    Leading Edge Slats are popularly being put into practice due to their capability to provide a significant increase in the lift generated by the wing airfoil and decrease in the stall. Consequently, their optimum design is critical for increased fuel efficiency and minimized environmental impact. This paper attempts to optimize the Leading-Edge Slat geometry and its orientation with respect to airfoil using the Genetic Algorithm. The class of the Genetic Algorithm implemented was Invasive Weed Optimisation as it showed significant potential in converging design to an optimal solution using the basic properties of seeding, growth, and reproduction in colonies. Slats being aerodynamic devices require smooth contoured surfaces without any sharp deformities, and accordingly, the Bézier airfoil parametrization method was used. It maximizes the convergence rate of the optimization process and produces practical aerodynamic shape profiles. The design process was initiated by producing an initial population of various profiles (chromosomes). These chromosomes are composed of genes that define and control the shape and orientation of the slat. Control points, Airfoil-Slat offset, and relative chord angle were taken as genes for the framework, and different profiles were acquired by randomly modifying the genes within a decided design space. For the study, Clark Y was taken as test airfoil, and the corresponding slat geometry was obtained by the MATLAB code. To compare individual chromosomes and to evaluate their feasibility, the fitness function was determined using Computational Fluid Dynamics simulations conducted on OpenFOAM. The lift force and the drag force at a constant angle of attack (AOA) were taken as fitness values. It was assigned to each chromosome, and the process was then repeated in a loop for different profiles, and the fittest wing slat arrangement was obtained. The framework was found capable of optimizing multi-element airfoil arrangements.
+                    <br><br>
+                    <center>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <center>
+                            <img src="../images/1-u.jpg" style="width: 90%; height: auto;"><figcaption style="font-size: 14px;">Fig. Velocity Contour of Initial Configuration</figcaption>
+                            </center>
+                        </div>
+                        <div class="col-md-6">
+                            <center>
+                            <img src="../images/29-u.jpg" style="width: 90%; height: auto;"><figcaption  style="font-size: 14px;">Fig. Velocity Contour of Final Configuration</figcaption>
+                            </center>
+                        </div>
+                    </div>
+                    </center>
+                    <br><br>
+                </li>
+
+                <li>
+                    <b>Investigation of Conduit Flow past Corrugated Structures using Large Eddy Simulations on OpenFOAM</b><br><br>
+                    Collaborator - <a href="https://www.linkedin.com/in/ujjwal-suri-b994a9157/" target="_blank">Ujjwal Suri</a>, <a href="https://www.linkedin.com/in/paras-sachdeva-a30b67139/" target="_blank">Paras Sachdeva</a><br>
+                    Methodologies, including rough-ribbed walls and particle injection, have been utilized for turbulence attenuation in the past. Screens and corrugations are yet another effective tool for reducing turbulence. The proposed investigation focuses on the application of square and hexagonal cross-sectional corrugations, which are introduced in the flow for turbulence attenuation inside rectangular conduits. Large Eddy Simulations in three dimensions were performed with OpenFOAM using a pressure-implicit solver and the standard Smagorinsky subgrid-scale model. Dampening of the spanwise velocity component and a relative increase in streamwise velocity component downstream of the corrugation was observed. The power spectral densities (PSD) of the flow upstream and downstream of the corrugation were examined and compared. A significant decrease in turbulent flow power density was observed. Furthermore, characteristics including turbulence intensity contours and isosurfaces of the Q-criterion were visualized. The results conclusively indicate a subsequent decrease in the turbulent nature of flow past corrugated structures—the below isosurface of Q criterion shown the transition of flow past corrugation submerged in conduit. The project culminated in two phases. In the first phase, the effect of employing various cross-sectional shapes was studied, and the second phase dealt with the parametric numerical study of flow past hexagonal corrugation wherein effects of various LES models, wall function, and grid resolution were studied.
+                    <br><br>
+                    <center><img src="../images/q-isosurface.jpg" style="width: 50%; height: auto;"><figcaption style="font-size: 14px;">Fig. Isosurfaces of Q-Criterion</figcaption></center>
+                    <br><br>
+                </li>
+
+                <li>
+                    <b>Metaheuristic Optimization of Dual-Element Vertical Axis Wind Turbine using Genetic Algorithm</b><br><br>
+                    Collaborator - <a href="https://www.linkedin.com/in/priyam-gupta-prsc14/" target="_blank">Priyam Gupta</a><br>
+                    This paper presents a framework for the optimization of Dual - Element Vertical Axis Wind Turbine (VAWT) Blade configurations for improvement in power generation. The multi-element nature of the turbine was specifically chosen as this configuration offers better-attached flow over a conventional single element H-type turbine. The framework was based on a genetic evolutionary algorithm, which is a metaheuristic optimization technique based on the principle of survival of the fittest. The class of genetic algorithm used was Invasive Weed Optimization. The geometry of the turbine consists of a rotor with three sets of dual-element airfoil oriented symmetrically. Effective chord length and relative chord angle were taken as modifying parameters for generating new configurations. The fitness of each individual was evaluated by performing two - dimensional Computational Fluid Dynamics Simulations. OpenFOAM was used for performing numerical simulations. Qualitative data of torque, power, total pressure, velocity, and turbulence intensity of worst and best configurations were compared. A considerable increase in power was observed from initial geometry when compared with the final geometry. The model was found ideal for optimizing multi-element VAWT configuration.
+                    <br><br>
+                </li>
+
+                <li>
+                    <b>Design and Development of a Low Cost Smartphone-based Particle Image Velocimetry System</b><br><br>
+                    Collaborators - <a href="https://www.linkedin.com/in/vishesh-kashyap/" target="_blank">Vishesh Kashyap</a>, <a href="https://www.linkedin.com/in/nehal-jajal-8a011b162/" target="_blank">Nehal Jajal</a>, <a href="https://www.linkedin.com/in/mrudang-mathur-528011111/" target="_blank">Mrudang Mathur</a><br>
+                    The components in a typical PIV system are required to be precise and accurately calibrated. However, due to the local unavailability of components and the high cost of import, very few institutions in developing countries such as India possess a PIV system. This project focuses on constructing a smartphone-based particle image velocimetry system for educational use. Using smartphone cameras and low-intensity laser diodes, established open-channel flow is visualized around a given test-body. Hydrogen bubbles obtained through the electrolysis of metal electrodes at an experimentally-obtained optimum voltage are utilized as seeding particles. An open-source MATLAB toolbox is used to track particle motion across a number of frames and obtain measurements of velocity reliably. Due to inaccessibility of any other experimental technique for validation CFD simulations were performed using the Volume of Fluid model in ANSYS Fluent and the results were compared with those obtained from experiments performed by varying camera parameters like Frame Rate, Exposure, and ISO and thus the most appropriate parameter was decided which could yield good results. Hence, the system was considered validated for further usage. The developed system is being used at Fluid Systems Laboratory, Delhi Technological University for academic teaching purposes.
+                    <br><br>
+                    
+                </li>
+            </ul>
+            <br><br>
+            <div class="col-md-3 text-center">
+                <a href="../research.html" class="btn btn-success">&larr; Back to Research Section</a>
+
+            </div>
+        </div>
+        <br><br>
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+        <script src="../js/bootstrap.js"></script>
+        <script src="../js/style.js"></script>
+        <footer class="card-footer">
+            &copy; 2020 Sushrut Kumar &middot All Rights Reserved &middot;
+            <span class="pull-right" aria-hidden="true">
+                <a href="#" id="back_to_top"><span class="button_icon"><i class="fa fa-chevron-up fa-2x"></i></span></a>
+            </span>
+        </p> <!--necessary for proper spacing-->
+        </footer>
+    </body>
+</html>

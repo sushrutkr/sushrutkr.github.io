@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sushrut Kumar's Talks</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <!-- Bootstrap -->
+            <link href="css/bootstrap.css" rel="stylesheet" media="screen">
+            <link href="css/style.css" rel="stylesheet">
+            <link href="css/style.css" rel="stylesheet">
+            <link rel="stylesheet" href="academicons-1.8.6/css/academicons.css"/>
+            <script src="https://kit.fontawesome.com/60848b8342.js" crossorigin="anonymous"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+            <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+            <script src='https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.js'></script>
+            <link href='https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.css' rel='stylesheet' />
+            <link rel="shortcut icon" type="images/png" href="/images/talks.png">
+            <style>
+                ::-moz-selection { /* Code for Firefox */
+                  color: white;
+                  background: #3f4041;
+                }
+    
+                ::selection {
+                  color: white;
+                  background: #3f4041;
+                }
+                </style>
+            <style>
+                /* Set the size of the div element that contains the map */
+                #map {
+                    height: 400px;  /* The height is 400 pixels */
+                    width: 100%;  /* The width is the width of the web page */
+                }
+            </style>
+            <style>
+                body { margin: 0; padding: 0; }
+                #map { position: relative; top: 0; bottom: 0; width: 60%; }
+            </style>
+    </head>
+
+    <body>
+        <div class="scroll-line"></div>
+        <nav class="navbar navbar-expand-xl navbar-dark bg-nav-dark justify-content-end">
+            <div class="container-fluid"> <!-- Container-fluid is necessary for mobile viewing and never change xl to sm | lg etc-->
+                <a class="navbar-brand cool-link" href="index.html" mb-0>SUSHRUT KUMAR</a>
+                <button class="navbar-toggler first-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <div class="animated-icon1"><span></span><span></span><span></span></div>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav navbar-nav ml-auto text-center">
+                    <li class="nav-item">
+                        <a class="nav-link cool-link" href="index.html">HOME</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link cool-link" href="research.html">RESEARCH</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link cool-link" href="cv.html">RESUME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link cool-link" href="https://scholar.google.co.in/citations?user=4nsdzjUAAAAJ&hl=en">PUBLICATIONS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link cool-link" href="talks.html">TALKS<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link cool-link" href="useful.html">USEFUL LINKS</a>
+                    </li>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container ">
+            <div class="col-md-12">
+                <center><h2>Talks</h2><hr class="star-light"></center>
+                <br>
+                <h4>Conferences</h4>
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul>
+                            <li>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                    <b>Fluid-structure interaction of bat-inspired membrane wings</b>
+                                    <a class="btn btn-primary btn-outline btn-xs" href="https://meetings.aps.org/Meeting/DFD22/Session/J03.10" target="_blank">Details</a>
+                                    <p>75th Annual Meeting of the Division of Fluid Dynamics
+                                    <br>Indianapolis, USA - 20th November, 2022 </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                    <b>A Data-Driven Method for Determining the Hydrodynamic Force Induced by Vortices – Force Partitioning Applied to PIV Data for a Caudal Fin Model</b>
+                                    <a class="btn btn-primary btn-outline btn-xs" href="https://meetings.aps.org/Meeting/DFD21/Session/M13.3" target="_blank">Details</a>
+                                    <p>74th American Physical Society Division of Fluid Dynamics Meeting
+                                    <br>Phoenix, USA - 22nd November, 2021 </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                    <b>Enhancement of Slat Airfoil Configuration using Invasive Weed Optimization Framework coupled with Artificial Neural Networks</b>
+                                    <a class="btn btn-primary btn-outline btn-xs" href="http://meetings.aps.org/Meeting/DFD19/Session/A12.6" target="_blank">Details</a>
+                                    <p>72nd American Physical Society Division of Fluid Dynamics Meeting
+                                    <br>Seattle, USA - 23rd November, 2019 </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                    <b>Evaluation of Pressure Field from PIV Data using Machine Learning </b>
+                                    <a class="btn btn-primary btn-outline btn-xs" href="https://event.asme.org/IMECE2019/Program//#/IMECE2019/sessions/697" target="_blank">Details</a>
+                                    <p>ASME International Mechanical Engineering Congress and Exposition
+                                    <br>Salt Lake City, USA - 13th November 2019</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                    <b>Design and Development of a Smartphone-Based Particle Image Velocimetry System</b>
+                                    <a class="btn btn-primary btn-outline btn-xs" href="http://meetings.aps.org/Meeting/DFD18/Session/G30.1" target="_blank">Details</a>
+                                    <p>71st American Physical Society Division of Fluid Dynamics Meeting
+                                    <br>Atlanta, USA - 19th November, 2018 </p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--
+                <br>
+                <h3>Posters</h3>
+                <div class="row">
+                    <b>Title Here</b>
+                    <p>Name of Conference</p>
+                </div>
+                -->
+            </div>
+            <center>
+                <div id="map"></div>
+            </center>
+
+        </div>
+        <br><br>
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/style.js"></script>
+
+        <script>
+        mapboxgl.accessToken = 'pk.eyJ1Ijoic3VzaHJ1dDk4IiwiYSI6ImNrOXptcTVvdjA5MWszbHBlMGt6YnRneXgifQ.GS0ftwlDf7PTv-mpuw8O0g';
+        var map = new mapboxgl.Map({
+        container: 'map', // container id
+        style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+        center: [77.102, 28.704], // starting position [lng, lat]
+        zoom: 0 // starting zoom
+        });
+
+        var marker = new mapboxgl.Marker().setLngLat([-86.1581, 39.7684, ]).addTo(map); //indianpolis
+        var marker = new mapboxgl.Marker().setLngLat([77.102, 28.704]).addTo(map);
+        var marker = new mapboxgl.Marker().setLngLat([-122.3321,  47.6062]).addTo(map);
+        var marker = new mapboxgl.Marker().setLngLat([-111.891045, 40.760780]).addTo(map);
+        var marker = new mapboxgl.Marker().setLngLat([80.270721,  13.082680]).addTo(map);
+        var marker = new mapboxgl.Marker().setLngLat([-76.6122, 39.2904]).addTo(map); //baltimore, MD
+        var marker = new mapboxgl.Marker().setLngLat([-112.074036, 33.448376]).addTo(map); //Phoenix, AZ
+
+            
+        </script>
+
+        <footer class="card-footer">
+            &copy; 2020 Sushrut Kumar &middot All Rights Reserved &middot;
+            <span class="pull-right" aria-hidden="true">
+                <a href="#" id="back_to_top"><span class="button_icon"><i class="fa fa-chevron-up fa-2x"></i></span></a>
+            </span>
+        </p> <!--necessary for proper spacing-->
+        </footer>
+    </body>
+</html>
+
+<!-- For Google map API
+
+<script>
+    // Initialize and add the map
+    function initMap() {
+      // The location
+      var seattle = {lat: 47.6062,lng: -122.3321};
+      var delhi = {lat: 28.704060, lng: 77.102493};
+      var salt_lake_city = {lat: 40.760780,lng: -111.891045};
+      var chennai = {lat: 13.082680, lng: 80.270721}
+      // The map, centered at Uluru
+      var map = new google.maps.Map(
+          document.getElementById("map"), {zoom: 2, center: delhi}
+          );
+      // The marker, positioned at Uluru
+      var marker = new google.maps.Marker({position: delhi, map: map});
+      var marker = new google.maps.Marker({position: salt_lake_city, map: map});
+      var marker = new google.maps.Marker({position: seattle, map: map});
+      var marker = new google.maps.Marker({position: chennai, map: map});
+    }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYBvD4gnWmyLG2yRBMuQkuTLd2l38P5KI&callback=initMap">
+    </script> -->
