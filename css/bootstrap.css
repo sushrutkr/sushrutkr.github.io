@@ -7,7 +7,9 @@
  /*
 Imports
  */
- @import url('https://fonts.googleapis.com/css?family=Lora:500&display=swap'); /*For medium 400 @import url('https://fonts.googleapis.com/css?family=Lora&display=swap');*/
+ /*For old Latex type font @import url('https://fonts.googleapis.com/css?family=Lora:500&display=swap'); */
+ /*For medium 400 @import url('https://fonts.googleapis.com/css?family=Lora&display=swap');*/
+ @import url('https://fonts.googleapis.com/css2?family=Lobster&family=PT+Sans:wght@400;700&display=swap');
  @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:500&display=swap');
  @import url('https://fonts.googleapis.com/css?family=Open+Sans:600&display=swap');
 
@@ -65,7 +67,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: 'Lora', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: 'PT+Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 17px;
   font-weight: 400;
   line-height: 1.75;
