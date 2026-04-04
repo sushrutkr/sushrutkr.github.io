@@ -4,6 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sushrut Kumar — GPU &amp; ML Systems Engineer</title>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164247545-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-164247545-1');
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Fraunces:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -455,7 +464,7 @@
   <div class="hero-actions">
     <a class="btn btn-filled" href="https://github.com/sushrutkr" target="_blank">↗ GitHub</a>
     <a class="btn btn-outline" href="https://scholar.google.co.in/citations?user=4nsdzjUAAAAJ&hl=en" target="_blank">Publications</a>
-    <a class="btn btn-outline" href="mailto:skumar94@jhu.edu">Email</a>
+    <a class="btn btn-outline" href="/cdn-cgi/l/email-protection#89fae2fce4e8fbb0bdc9e3e1fca7ecedfc">Email</a>
   </div>
 </div>
 
@@ -824,7 +833,7 @@
     and research at the boundary of hardware and learning.
   </p>
   <div class="contact-row reveal">
-    <a class="btn btn-filled" href="mailto:skumar94@jhu.edu">skumar94@jhu.edu</a>
+    <a class="btn btn-filled" href="/cdn-cgi/l/email-protection#a8dbc3ddc5c9da919ce8c2c0dd86cdccdd"><span class="__cf_email__" data-cfemail="6f1c041a020e1d565b2f05071a410a0b1a">[email&#160;protected]</span></a>
     <a class="btn btn-outline" href="https://github.com/sushrutkr" target="_blank">GitHub</a>
     <a class="btn btn-outline" href="https://www.linkedin.com/in/sushrutkr" target="_blank">LinkedIn</a>
     <a class="btn btn-outline" href="https://scholar.google.co.in/citations?user=4nsdzjUAAAAJ&hl=en" target="_blank">Scholar</a>
@@ -837,7 +846,7 @@
   <p>Johns Hopkins PhD · NVIDIA Alumni · GTC 2026 · NVIDIA Academic Research Grant</p>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // ── SCROLL REVEAL ──
   const io = new IntersectionObserver(
     entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); }),
@@ -866,14 +875,4 @@
 
   // Respect saved preference, then system preference
   const saved  = localStorage.getItem(STORAGE_KEY);
-  const system = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-  applyTheme(saved || system);
-
-  btn.addEventListener('click', () => {
-    const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-    applyTheme(next);
-  });
-</script>
-
-</body>
-</html>
+  const system = window.ma
