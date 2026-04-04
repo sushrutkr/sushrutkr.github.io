@@ -1,150 +1,879 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164247545-1"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sushrut Kumar — GPU &amp; ML Systems Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Fraunces:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-            gtag('config', 'UA-164247545-1');
-        </script>
-        <!-- <style>
-            ::-moz-selection { /* Code for Firefox */
-              color: white;
-              background: #3f4041;
-            }
+    /* ── LIGHT THEME (default) ── */
+    :root,
+    [data-theme="light"] {
+      --bg:        #f7f6f2;
+      --bg2:       #efede8;
+      --bg3:       #e6e3dc;
+      --border:    rgba(0,0,0,0.08);
+      --border-hi: rgba(0,0,0,0.15);
+      --text:      #1a1a18;
+      --muted:     #7a7870;
+      --dim:       #b0aea8;
+      --green:     #2d6a00;
+      --teal:      #0a6650;
+      --amber:     #7a4400;
+      --nav-bg:    rgba(247,246,242,0.92);
+      --dot-color: rgba(0,0,0,0.07);
+      --mono:  'IBM Plex Mono', monospace;
+      --serif: 'Fraunces', Georgia, serif;
+      --sans:  'DM Sans', system-ui, sans-serif;
+    }
 
-            ::selection {
-              color: white;
-              background: #3f4041;
-            }
-            </style> -->
-        <title>Sushrut Kumar's Homepage</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <!-- Bootstrap -->
-            <link href="css/bootstrap.css" rel="stylesheet" media="screen">
-            <link href="css/style.css" rel="stylesheet">
-            <link rel="stylesheet" href="academicons-1.8.6/css/academicons.css"/>
-        <script src="https://kit.fontawesome.com/60848b8342.js" crossorigin="anonymous"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-        <link rel="shortcut icon" type="images/png" href="/images/icon.png">
-    </head>
-    <body>
-        <div class="scroll-line"></div>
-        <nav class="navbar navbar-expand-xl navbar-dark bg-nav-dark justify-content-end">
-            <div class="container-fluid"> <!-- Container-fluid is necessary for mobile viewing and never change xl to sm | lg etc-->
-                <a class="navbar-brand cool-link" href="index.html" mb-0>SUSHRUT KUMAR</a>
-                <button class="navbar-toggler first-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <div class="animated-icon1"><span></span><span></span><span></span></div>
-                </button>
+    /* ── DARK THEME ── */
+    [data-theme="dark"] {
+      --bg:        #09090b;
+      --bg2:       #0f0f12;
+      --bg3:       #161619;
+      --border:    rgba(255,255,255,0.06);
+      --border-hi: rgba(255,255,255,0.12);
+      --text:      #ddddd6;
+      --muted:     #666660;
+      --dim:       #3a3a36;
+      --green:     #c9f75d;
+      --teal:      #4df2c0;
+      --amber:     #f5a94a;
+      --nav-bg:    rgba(9,9,11,0.88);
+      --dot-color: rgba(255,255,255,0.055);
+    }
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="nav navbar-nav ml-auto text-center">
-                    <li class="nav-item">
-                        <a class="nav-link cool-link" href="index.html">HOME<span class="sr-only">(current)</span></a>
-                    </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link cool-link" href="research.html">RESEARCH</a>
-                    </li> -->
-                    <li class="nav-item">
-                        <a class="nav-link cool-link" href="cv.html">RESUME</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link cool-link" href="https://scholar.google.co.in/citations?user=4nsdzjUAAAAJ&hl=en" target="_blank">PUBLICATIONS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link cool-link" href="talks.html">CONFERENCE MAP</a>
-                    </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link cool-link" href="useful.html">USEFUL LINKS</a>
-                    </li> -->
-                    <!--
-                        Dropdown method - Problem with underline hover
+    html { scroll-behavior: smooth; }
 
-                        <li class="nav-item">
-                        <a class="nav-link dropdown-toggle cool-link" href="research.html" id="navDrop" role="button" data-toggle="dropdown">RESEARCH</a>
-                        <div class="dropdown-menu" aria-labelledby="navDrop">
-                            <a class="dropdown-item" href="#">Fluid Mechanics Group</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Computational Fluid Dynamics Lab</a>
-                        </div>
-                    </li>
-                    -->
-                </div>
-            </div>
-        </nav>
-        <!-- <div id="banner">
-            <br>
-            <div class="col-md-4 mx-auto">
-            <center>
-            <center><img class="img-thumbnail" src="images/sushrut.png"></center>
-            <hr style="height:2px;;background-color:#2c3e50">
-            <a style="color:#fff"><center><b font>Undergraduate Student Researcher</b><br>
-            Fluid Mechanics Group<br>
-            Delhi Technological University, India<br><center></a>
-            <hr style="height:2px;;background-color:#2c3e50">
-            <a href = "mailto:skumar94@jhu.edu" target="_blank"><i class="fas fa-envelope fa-2x"></i></a> &ensp;
-            <a href = "https://www.linkedin.com/in/sushrutkumar/" target="_blank"><i class="fa fa-github fa-2x"></i></a>&ensp;
-            <a href = "https://scholar.google.co.in/citations?user=4nsdzjUAAAAJ&hl=en" target="_blank"><i class="ai ai-google-scholar ai-2x"></i></a> &ensp;
-            <a href = "https://orcid.org/0000-0003-2391-0042" target="_blank"><i class="fab fa-orcid fa-2x"></i></a> &ensp;
-            <a href = "https://www.linkedin.com/in/sushrutkr/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
-            </div>
-            <br>
-        </center>
-        </div> -->
-        <div id="page_center" class="container">
-            <!-- <blockquote class="otro-blockquote">
-                The ideal engineer is a composite … He is not a scientist, he is not a mathematician,
-                            he is not a sociologist or a writer; but he may use the knowledge and techniques of any or all of
-                            these disciplines in solving engineering problems.
-                <span class="text-right">Nathan W. Dougherty</span>
-            </blockquote> -->
-            <div class="row">
-                <div class="col-md-4">
-                    <center><img class="img-thumbnail" src="images/sushrut.png"></center><br><br>
-                    <center><hr style="height:2px;background-color:#2c3e50;">Ph.D. Candidate<br>
-                        <!-- Computational Sciences and Mechanical Engineering<br> -->
-                    Johns Hopkins University<hr style="height:2px;;background-color:#2c3e50"><br><center>
-                        <a href = "mailto:skumar94@jhu.edu" target="_blank"><i class="fas fa-envelope fa-2x"></i></a> &ensp;
-                        <a href = "https://github.com/sushrutkr" target="_blank"><i class="fa fa-github fa-2x"></i></a>&ensp;
-                        <!--<a href = "https://www.researchgate.net/profile/Sushrut_Kumar" target="_blank"><i class="fab fa-researchgate fa-2x"></i></a> &ensp;-->
-                        <a href = "https://scholar.google.co.in/citations?user=4nsdzjUAAAAJ&hl=en" target="_blank"><i class="ai ai-google-scholar ai-2x"></i></a> &ensp;
-                        <a href = "https://orcid.org/0000-0003-2391-0042" target="_blank"><i class="fab fa-orcid fa-2x"></i></a> &ensp;
-                        <a href = "https://www.linkedin.com/in/sushrutkumar/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
-                <br><br>
-                </div>
-                <br><br>
-                <div class="col-md-8">
-                    <p class="text-justify">
-                        I am a Ph.D. candidate at Johns Hopkins University working in the <a href="https://engineering.jhu.edu/fsag/" target="_blank">Flow Physics and Computation Laboratory</a> with Prof. Rajat Mittal. <br><br>
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
 
-                        At Hopkins, my research is a unique blend of applied mathematics, computer science, and computational mechanics. I primarily focus on developing mathematical and numerical models using differential equations and linear algebra that describe the multiphysics phenomena in nature. These models are extremely large and computationally expensive to solve. The solutions are often obtained by developing sophisticated computer codes using data structures and algorithm concepts. This requires significant programming, debugging, and optimization in C++, Fortran, and MPI to run them extremely fast on HPC clusters utilizing thousands of CPUs to produce simulation results. 
-                        <br><br>
-                        Once the simulation is complete, the next task is to harness the chaotic terabyte-scale time-series datasets with at least 200+ million spatial data points, each with at least 4 degrees of freedom. Analyzing this data and extracting meaningful engineering insights is a highly complex task, and that's where I put my statistics and AI/ML skills using Python libraries like NumPy, SciPy, TensorFlow, PyTorch, PySpark, and Pandas to work.
-                        <br><br>
-                        These codes are versatile and can mathematically model almost anything a human mind can think of. Here is an example of the extension of the models to physical systems - The fluid-structure interaction of a bat's flexible wing. Engineers, for a while, tried to understand the aerodynamics of a bat flight and draw inspiration for advanced aerial systems but, due to challenges in the modeling methods, were unable to produce anything significant. 
-                        <br><br>
-                        These are some of the earliest and most realistic simulations in this area. These simulations were performed on ARCH's Rockfish supercomputer using 2000+ CPU cores.<br><br>
-                        <iframe width="320" height="270" src="https://www.youtube.com/embed/WT0onFc3z1k?autoplay=1&loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>   
-                        <iframe width="320" height="270" src="https://www.youtube.com/embed/3twJKQKOcXc?autoplay=1&loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        </ul>
-                    </p>
-                </div>
-            </div>
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background-image: radial-gradient(circle, var(--dot-color) 1px, transparent 1px);
+      background-size: 28px 28px;
+      pointer-events: none; z-index: 0;
+      transition: background-image 0.3s;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.1rem 2.5rem;
+      border-bottom: 1px solid var(--border);
+      background: var(--nav-bg);
+      backdrop-filter: blur(18px);
+      transition: background 0.3s, border-color 0.3s;
+    }
+    .nav-left { display: flex; align-items: center; gap: 2rem; }
+    .nav-mark {
+      font-family: var(--mono); font-size: 0.78rem;
+      color: var(--green); letter-spacing: 0.05em;
+      text-decoration: none; font-weight: 600;
+    }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      font-family: var(--mono); font-size: 0.68rem;
+      color: var(--muted); text-decoration: none;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--text); }
+
+    /* ── THEME TOGGLE ── */
+    .theme-toggle {
+      background: none; border: 1px solid var(--border-hi);
+      border-radius: 100px; cursor: pointer;
+      display: flex; align-items: center; gap: 0.4rem;
+      padding: 0.35rem 0.75rem;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .theme-toggle:hover { border-color: var(--green); background: var(--bg2); }
+    .theme-toggle .icon { font-size: 0.8rem; line-height: 1; }
+    .theme-toggle .toggle-label {
+      font-family: var(--mono); font-size: 0.62rem;
+      color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase;
+    }
+
+    /* ── HERO ── */
+    #hero {
+      position: relative; z-index: 1;
+      min-height: 100vh;
+      display: flex; flex-direction: column; justify-content: flex-end;
+      padding: 8rem 2.5rem 5.5rem;
+      max-width: 1120px; margin: 0 auto;
+    }
+    .hero-kicker {
+      font-family: var(--mono); font-size: 0.7rem;
+      color: var(--green); letter-spacing: 0.2em; text-transform: uppercase;
+      margin-bottom: 1.75rem;
+      display: flex; align-items: center; gap: 0.75rem;
+      opacity: 0; animation: fadeUp 0.7s 0.1s forwards;
+    }
+    .hero-kicker::before {
+      content: ''; display: inline-block; width: 28px; height: 1px; background: var(--green);
+    }
+    h1.hero-name {
+      font-family: var(--serif);
+      font-size: clamp(3.8rem, 9vw, 8rem);
+      line-height: 0.95; letter-spacing: -0.03em; font-weight: 300;
+      margin-bottom: 1.5rem;
+      opacity: 0; animation: fadeUp 0.7s 0.2s forwards;
+    }
+    h1.hero-name em { font-style: italic; color: var(--green); }
+    .hero-bio {
+      font-size: clamp(1rem, 1.6vw, 1.15rem);
+      color: var(--muted); max-width: 640px;
+      line-height: 1.8; font-weight: 300; margin-bottom: 2.25rem;
+      opacity: 0; animation: fadeUp 0.7s 0.3s forwards;
+    }
+    .hero-bio strong { color: var(--text); font-weight: 500; }
+    .hero-bio em { color: var(--teal); font-style: normal; }
+    .hero-pill {
+      display: inline-flex; align-items: center; gap: 0.55rem;
+      font-family: var(--mono); font-size: 0.72rem; color: var(--teal);
+      border: 1px solid rgba(10,102,80,0.3); border-radius: 100px;
+      padding: 0.38rem 1rem; letter-spacing: 0.04em; margin-bottom: 2.75rem;
+      opacity: 0; animation: fadeUp 0.7s 0.38s forwards;
+    }
+    [data-theme="dark"] .hero-pill { border-color: rgba(77,242,192,0.25); }
+    .hero-pill .dot {
+      width: 6px; height: 6px; border-radius: 50%; background: var(--teal);
+      animation: blink 2.2s ease-in-out infinite;
+    }
+    @keyframes blink { 0%,100%{opacity:1;} 50%{opacity:0.3;} }
+    .hero-actions {
+      display: flex; gap: 0.85rem; flex-wrap: wrap;
+      opacity: 0; animation: fadeUp 0.7s 0.48s forwards;
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── BUTTONS ── */
+    .btn {
+      font-family: var(--mono); font-size: 0.72rem;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      text-decoration: none; padding: 0.65rem 1.4rem;
+      border-radius: 5px; transition: all 0.18s;
+      display: inline-flex; align-items: center; gap: 0.45rem;
+    }
+    .btn-filled { background: var(--green); color: #fff; font-weight: 600; }
+    [data-theme="dark"] .btn-filled { color: #09090b; }
+    .btn-filled:hover { filter: brightness(1.15); transform: translateY(-1px); }
+    .btn-outline { border: 1px solid var(--border-hi); color: var(--text); }
+    .btn-outline:hover { border-color: var(--green); color: var(--green); }
+
+    /* ── SECTIONS ── */
+    section {
+      position: relative; z-index: 1;
+      max-width: 1120px; margin: 0 auto;
+      padding: 5.5rem 2.5rem;
+      border-top: 1px solid var(--border);
+    }
+    .sec-label {
+      font-family: var(--mono); font-size: 0.66rem;
+      color: var(--green); letter-spacing: 0.22em; text-transform: uppercase;
+      margin-bottom: 3rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .sec-label::after {
+      content: ''; flex: 1; height: 1px; background: var(--border); max-width: 180px;
+    }
+
+    /* ── ABOUT ── */
+    .about-layout {
+      display: grid; grid-template-columns: 3fr 2fr; gap: 5rem; align-items: start;
+    }
+    .about-copy p {
+      font-size: 1.02rem; font-weight: 300;
+      color: var(--text); line-height: 1.85; margin-bottom: 1.3rem;
+    }
+    .about-copy p:last-child { margin-bottom: 0; }
+    .about-copy strong { color: var(--green); font-weight: 500; }
+    .about-copy em { color: var(--teal); font-style: normal; }
+    .about-aside { display: flex; flex-direction: column; gap: 1.2rem; }
+    .stat-tile {
+      border: 1px solid var(--border); border-radius: 8px;
+      padding: 1.2rem 1.5rem; background: var(--bg2);
+      transition: border-color 0.2s, background 0.2s;
+      position: relative; overflow: hidden;
+    }
+    .stat-tile::after {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, var(--green), transparent);
+      opacity: 0; transition: opacity 0.25s;
+    }
+    .stat-tile:hover { border-color: var(--border-hi); background: var(--bg3); }
+    .stat-tile:hover::after { opacity: 1; }
+    .stat-n {
+      font-family: var(--serif); font-size: 2.6rem; line-height: 1;
+      color: var(--green); margin-bottom: 0.2rem; font-weight: 300;
+    }
+    .stat-n.teal  { color: var(--teal); }
+    .stat-n.amber { color: var(--amber); }
+    .stat-d {
+      font-family: var(--mono); font-size: 0.68rem;
+      color: var(--muted); letter-spacing: 0.08em;
+      text-transform: uppercase; line-height: 1.4;
+    }
+
+    /* ── EXPERIENCE ── */
+    .timeline { display: flex; flex-direction: column; }
+    .tl-item {
+      display: grid; grid-template-columns: 130px 1fr;
+      gap: 2rem; padding: 2.25rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .tl-item:first-child { border-top: 1px solid var(--border); }
+    .tl-when {
+      font-family: var(--mono); font-size: 0.68rem;
+      color: var(--dim); letter-spacing: 0.06em;
+      padding-top: 0.3rem; line-height: 1.6;
+    }
+    .tl-where {
+      font-family: var(--mono); font-size: 0.7rem;
+      color: var(--green); letter-spacing: 0.04em;
+      text-transform: uppercase; margin-bottom: 0.4rem;
+    }
+    .tl-role {
+      font-family: var(--serif); font-size: 1.35rem;
+      font-weight: 300; margin-bottom: 0.75rem; line-height: 1.2;
+    }
+    .tl-body {
+      font-size: 0.9rem; color: var(--muted); line-height: 1.8; max-width: 640px;
+    }
+    .tl-body strong { color: var(--text); font-weight: 500; }
+    .tl-body em { color: var(--teal); font-style: normal; }
+    .result-strip {
+      background: var(--bg2); border: 1px solid var(--border);
+      border-left: 3px solid var(--green); border-radius: 0 6px 6px 0;
+      padding: 0.85rem 1.1rem; margin-top: 1rem;
+      font-size: 0.85rem; color: var(--text); line-height: 1.6;
+    }
+    .result-strip strong { color: var(--green); }
+    .tl-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.9rem; }
+    .chip {
+      font-family: var(--mono); font-size: 0.62rem;
+      color: var(--dim); border: 1px solid var(--border);
+      border-radius: 3px; padding: 0.2rem 0.5rem;
+      letter-spacing: 0.04em; background: var(--bg);
+      transition: color 0.15s, border-color 0.15s;
+    }
+    .tl-item:hover .chip { color: var(--muted); border-color: var(--border-hi); }
+
+    /* ── STACK ── */
+    .skills-matrix {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 1px; background: var(--border);
+      border: 1px solid var(--border); border-radius: 10px; overflow: hidden;
+    }
+    .skill-cell { background: var(--bg2); padding: 1.6rem; transition: background 0.2s; }
+    .skill-cell:hover { background: var(--bg3); }
+    .skill-head {
+      font-family: var(--mono); font-size: 0.68rem;
+      color: var(--teal); letter-spacing: 0.1em;
+      text-transform: uppercase; margin-bottom: 0.85rem;
+    }
+    .skill-items { display: flex; flex-direction: column; gap: 0.32rem; }
+    .skill-item { font-family: var(--mono); font-size: 0.72rem; color: var(--dim); }
+    .skill-item.hi { color: var(--text); }
+
+    /* ── PROJECTS ── */
+    .projects-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1px; background: var(--border);
+      border: 1px solid var(--border); border-radius: 10px; overflow: hidden;
+    }
+    .proj-card {
+      background: var(--bg2); padding: 2rem;
+      text-decoration: none; color: inherit;
+      transition: background 0.2s;
+      position: relative; overflow: hidden;
+      display: flex; flex-direction: column;
+    }
+    .proj-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: var(--green);
+      transform: scaleX(0); transform-origin: left; transition: transform 0.3s;
+    }
+    .proj-card:hover { background: var(--bg3); }
+    .proj-card:hover::before { transform: scaleX(1); }
+    .proj-tag {
+      font-family: var(--mono); font-size: 0.62rem;
+      color: var(--amber); letter-spacing: 0.1em;
+      text-transform: uppercase; margin-bottom: 0.75rem;
+    }
+    .proj-name {
+      font-family: var(--serif); font-size: 1.3rem;
+      font-weight: 300; margin-bottom: 0.65rem; line-height: 1.2;
+    }
+    .proj-desc {
+      font-size: 0.83rem; color: var(--muted); line-height: 1.7; flex: 1; margin-bottom: 1rem;
+    }
+    .proj-chips { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-bottom: 0.8rem; }
+    .proj-link {
+      font-family: var(--mono); font-size: 0.68rem;
+      color: var(--green); letter-spacing: 0.06em;
+      opacity: 0; transition: opacity 0.2s;
+    }
+    .proj-card:hover .proj-link { opacity: 1; }
+
+    /* ── PUBLICATIONS ── */
+    .pubs-list { display: flex; flex-direction: column; }
+    .pub-row {
+      display: grid; grid-template-columns: 56px 1fr;
+      gap: 1.5rem; padding: 1.35rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .pub-row:first-child { border-top: 1px solid var(--border); }
+    .pub-yr {
+      font-family: var(--mono); font-size: 0.68rem;
+      color: var(--dim); letter-spacing: 0.04em; padding-top: 0.25rem;
+    }
+    .pub-title {
+      font-size: 0.92rem; color: var(--text);
+      font-weight: 400; line-height: 1.55; margin-bottom: 0.25rem;
+    }
+    .pub-venue {
+      font-family: var(--mono); font-size: 0.65rem; color: var(--amber); letter-spacing: 0.05em;
+    }
+    .pub-venue a { color: inherit; text-decoration: none; }
+    .pub-venue a:hover { color: var(--green); }
+    .pub-see-all {
+      display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 1.75rem;
+      font-family: var(--mono); font-size: 0.72rem;
+      color: var(--muted); text-decoration: none; letter-spacing: 0.06em;
+      transition: color 0.2s;
+    }
+    .pub-see-all:hover { color: var(--green); }
+
+    /* ── CONTACT ── */
+    #contact { text-align: center; }
+    .contact-head {
+      font-family: var(--serif);
+      font-size: clamp(2.8rem, 5.5vw, 5rem);
+      font-weight: 300; line-height: 1.05; margin-bottom: 1.1rem;
+    }
+    .contact-head em { font-style: italic; color: var(--green); }
+    .contact-sub {
+      font-size: 1rem; color: var(--muted); max-width: 480px;
+      margin: 0 auto 2.5rem; font-weight: 300; line-height: 1.7;
+    }
+    .contact-sub strong { color: var(--text); font-weight: 400; }
+    .contact-row { display: flex; justify-content: center; gap: 0.85rem; flex-wrap: wrap; }
+
+    /* ── FOOTER ── */
+    footer {
+      position: relative; z-index: 1;
+      border-top: 1px solid var(--border);
+      padding: 1.75rem 2.5rem;
+      display: flex; justify-content: space-between; align-items: center;
+      max-width: 1120px; margin: 0 auto;
+    }
+    footer p {
+      font-family: var(--mono); font-size: 0.65rem; color: var(--dim); letter-spacing: 0.05em;
+    }
+
+    /* ── SCROLL REVEAL ── */
+    .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.55s ease, transform 0.55s ease; }
+    .reveal.in { opacity: 1; transform: none; }
+    .reveal-d1 { transition-delay: 0.08s; }
+    .reveal-d2 { transition-delay: 0.16s; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .about-layout { grid-template-columns: 1fr; gap: 3rem; }
+      .projects-grid { grid-template-columns: 1fr 1fr; }
+      .skills-matrix { grid-template-columns: 1fr 1fr; }
+      .tl-item { grid-template-columns: 90px 1fr; gap: 1rem; }
+    }
+    @media (max-width: 640px) {
+      nav { padding: 1rem 1.25rem; }
+      .nav-links { display: none; }
+      section { padding: 3.5rem 1.25rem; }
+      #hero { padding: 6rem 1.25rem 4rem; }
+      .projects-grid { grid-template-columns: 1fr; }
+      .skills-matrix { grid-template-columns: 1fr 1fr; }
+      .tl-item { grid-template-columns: 1fr; gap: 0.25rem; }
+      .tl-when { padding-top: 0; }
+      footer { flex-direction: column; gap: 0.4rem; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-left">
+    <a class="nav-mark" href="#hero">SK /</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#stack">Stack</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+    <span class="icon" id="themeIcon">☀</span>
+    <span class="toggle-label" id="themeLabel">Light</span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<div id="hero">
+  <div class="hero-kicker">GPU Performance · ML Systems · PhD, Johns Hopkins</div>
+  <h1 class="hero-name">Sushrut<br/><em>Kumar</em></h1>
+  <p class="hero-bio">
+    I write <strong>CUDA kernels</strong>, build <strong>ML training infrastructure</strong>,
+    and design <strong>neural operators</strong> that replace classical solvers at scale.
+    My work lives close to the hardware —
+    from <em>Blackwell GEMM kernels</em> to distributed training on GPU clusters.
+  </p>
+  <div class="hero-pill">
+    <span class="dot"></span>
+    PhD Candidate, Johns Hopkins · Defending April 2026
+  </div>
+  <div class="hero-actions">
+    <a class="btn btn-filled" href="https://github.com/sushrutkr" target="_blank">↗ GitHub</a>
+    <a class="btn btn-outline" href="https://scholar.google.co.in/citations?user=4nsdzjUAAAAJ&hl=en" target="_blank">Publications</a>
+    <a class="btn btn-outline" href="mailto:skumar94@jhu.edu">Email</a>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="sec-label">About</div>
+  <div class="about-layout">
+    <div class="about-copy reveal">
+      <p>
+        I'm a GPU performance and ML systems engineer finishing a PhD at
+        <strong>Johns Hopkins</strong>. My research background is in
+        large-scale scientific computing — problems that stress-test both
+        numerical methods and hardware simultaneously. That combination pushed me
+        deep into <em>GPU architecture</em>, <em>kernel optimization</em>, and
+        <em>distributed systems</em>.
+      </p>
+      <p>
+        At <strong>NVIDIA</strong>, I built ML infrastructure for physics simulation
+        inside AI factories — hybrid neural operators trained on multi-GPU clusters
+        for real-time physical state reconstruction from live sensor streams.
+        The system replaced classical solvers running on dedicated HPC racks
+        with <strong>inference at 5000× the speed</strong>, contributing to 5 US patents.
+      </p>
+      <p>
+        Alongside that, I've gone deep on kernel engineering: writing
+        <strong>Blackwell GEMM kernels from scratch</strong> with CuTe and CUTLASS,
+        profiling with Nsight at the warp level, and building multi-GPU solvers
+        that scale to <em>1 billion grid points</em> with 90%+ efficiency.
+        I think in memory hierarchies and compute rooflines.
+      </p>
+      <p>
+        I've published <strong>13 peer-reviewed papers</strong>, presented at
+        GTC 2026, and hold an NVIDIA Academic Research Grant
+        (4 RTX Blackwell GPUs) to keep pushing the work forward.
+      </p>
+    </div>
+    <div class="about-aside reveal reveal-d1">
+      <div class="stat-tile">
+        <div class="stat-n">5000×</div>
+        <div class="stat-d">Inference speedup · neural operator (NVIDIA)</div>
+      </div>
+      <div class="stat-tile">
+        <div class="stat-n">500×</div>
+        <div class="stat-d">End-to-end speedup · GPU solver vs. CPU baseline</div>
+      </div>
+      <div class="stat-tile">
+        <div class="stat-n teal">1B</div>
+        <div class="stat-d">Grid points · multi-GPU solver at 90%+ scaling efficiency</div>
+      </div>
+      <div class="stat-tile">
+        <div class="stat-n amber">13</div>
+        <div class="stat-d">Peer-reviewed publications</div>
+      </div>
+      <div class="stat-tile">
+        <div class="stat-n">5</div>
+        <div class="stat-d">US Patents · NVIDIA internship</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="work">
+  <div class="sec-label">Experience</div>
+  <div class="timeline">
+
+    <div class="tl-item reveal">
+      <div class="tl-when">Jan–Sep 2024<br/>May–Sep 2025</div>
+      <div>
+        <div class="tl-where">NVIDIA · Santa Clara</div>
+        <div class="tl-role">ML Systems &amp; Physics Simulation Intern</div>
+        <div class="tl-body">
+          Built ML training and inference infrastructure for physics simulation
+          inside <strong>AI factories</strong>. Designed a
+          <strong>hybrid neural operator</strong> combining Graph Neural Operators
+          for sparse sensor encoding with 3D Fourier Neural Operators for
+          full-field physical state reconstruction.
+          Scaled training to <strong>8×A100s</strong> using DDP, mixed precision,
+          and activation checkpointing. Built GPU-accelerated data pipelines
+          in NVIDIA Warp to process 1 TB of training data.
+          Developed inference system for <strong>live sensor fusion</strong>
+          enabling real-time physical state estimation.
+          <div class="result-strip">
+            <strong>→ 5000× inference speedup</strong> vs. classical solvers ·
+            5 US patents filed · Presented at NVIDIA GTC 2026, San Jose
+          </div>
         </div>
-        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-        <script src="js/bootstrap.js"></script>
-        <script src="js/style.js"></script>
+        <div class="tl-chips">
+          <span class="chip">PyTorch</span><span class="chip">PyG</span>
+          <span class="chip">PhysicsNeMo</span><span class="chip">NVIDIA Warp</span>
+          <span class="chip">DDP</span><span class="chip">mixed precision</span>
+          <span class="chip">GNO</span><span class="chip">FNO</span>
+          <span class="chip">A100</span><span class="chip">neural operators</span>
+        </div>
+      </div>
+    </div>
 
-        <footer class="card-footer">
-            &copy; 2023 Sushrut Kumar &middot All Rights Reserved &middot;</a>
-            <span class="pull-right" aria-hidden="true">
-                <a href="#" id="back_to_top"><span class="button_icon"><i class="fa fa-chevron-up fa-2x"></i></span></a>
-            </span>
-        </p> <!--necessary for proper spacing-->
-        </footer>
-    </body>
+    <div class="tl-item reveal">
+      <div class="tl-when">Jan 2021<br/>– present</div>
+      <div>
+        <div class="tl-where">Johns Hopkins · Flow Physics Lab</div>
+        <div class="tl-role">Doctoral Researcher — GPU Systems &amp; ML</div>
+        <div class="tl-body">
+          Two parallel workstreams over five years.<br/><br/>
+          <strong>GPU kernel &amp; systems engineering:</strong> Took a 75,000-line
+          legacy solver and built it into a production multi-GPU codebase.
+          Wrote CUDA kernels for sparse linear solvers (BiCGStab + preconditioner),
+          ray tracing, and geometric computations. Inter-node communication via
+          CUDA-aware MPI, NCCL, and NVSHMEM. Profiled with Nsight Systems and
+          Nsight Compute — occupancy, memory bandwidth, warp divergence —
+          to reach <em>90%+ weak and strong scaling efficiency</em> across 1 billion grid points.
+          Tested on L40s, A100, H100, GH200 Superchip.
+          <div class="result-strip">
+            <strong>→ 500× total speedup:</strong> 10× new numerical methods + 25× GPU acceleration + 2× algorithmic improvements
+          </div>
+          <br/>
+          <strong>ML research:</strong> Built <em>AeTHERON</em> — a heterogeneous GNN
+          neural simulator with sparse cross-attention and autoregressive
+          time-conditioning for unsteady spatio-temporal prediction on unstructured meshes.
+          Analyzed &gt;40 TB of 4D time-series output across 3 journal papers.
+        </div>
+        <div class="tl-chips">
+          <span class="chip">CUDA C++</span><span class="chip">OpenACC</span>
+          <span class="chip">MPI</span><span class="chip">NCCL</span>
+          <span class="chip">NVSHMEM</span><span class="chip">Nsight</span>
+          <span class="chip">PyTorch</span><span class="chip">PyG</span>
+          <span class="chip">GNN</span><span class="chip">H100</span>
+          <span class="chip">GH200</span><span class="chip">C++</span><span class="chip">Fortran</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-item reveal">
+      <div class="tl-when">Sep–Nov 2020</div>
+      <div>
+        <div class="tl-where">University of Melbourne</div>
+        <div class="tl-role">Research Intern</div>
+        <div class="tl-body">
+          Built a CNN autoencoder to predict PDE solutions from initial conditions —
+          <strong>400× faster than the numerical solver</strong> on the same problem class.
+        </div>
+        <div class="tl-chips">
+          <span class="chip">TensorFlow</span><span class="chip">CNN</span><span class="chip">PDE surrogate</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-item reveal">
+      <div class="tl-when">May–Jul 2019</div>
+      <div>
+        <div class="tl-where">IIT Kharagpur · JNCASR Fellow</div>
+        <div class="tl-role">Research Fellow</div>
+        <div class="tl-body">
+          Modeled particle transport via stochastic rotation dynamics.
+          Restructured data layout to cut time complexity from O(N<sup>DK</sup>) to O(K),
+          then applied SIMD vectorization and LLVM compilation via Numba —
+          <strong>40× net speedup</strong>.
+        </div>
+        <div class="tl-chips">
+          <span class="chip">Python</span><span class="chip">Numba</span>
+          <span class="chip">SIMD</span><span class="chip">algorithmic optimization</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STACK -->
+<section id="stack">
+  <div class="sec-label">Technical Stack</div>
+  <div class="skills-matrix reveal">
+    <div class="skill-cell">
+      <div class="skill-head">GPU / CUDA</div>
+      <div class="skill-items">
+        <span class="skill-item hi">CUDA C++</span>
+        <span class="skill-item hi">CuTe / CUTLASS</span>
+        <span class="skill-item hi">GEMM kernels</span>
+        <span class="skill-item hi">Warp specialization</span>
+        <span class="skill-item hi">TMA / persistent kernels</span>
+        <span class="skill-item">OpenACC</span>
+        <span class="skill-item">NCCL / NVSHMEM</span>
+        <span class="skill-item">Nsight Systems / Compute</span>
+        <span class="skill-item">CUDA graphs</span>
+      </div>
+    </div>
+    <div class="skill-cell">
+      <div class="skill-head">ML Systems</div>
+      <div class="skill-items">
+        <span class="skill-item hi">PyTorch</span>
+        <span class="skill-item hi">Distributed training (DDP)</span>
+        <span class="skill-item hi">Mixed precision</span>
+        <span class="skill-item hi">Neural operators (FNO/GNO)</span>
+        <span class="skill-item hi">GNNs</span>
+        <span class="skill-item">PyTorch Geometric</span>
+        <span class="skill-item">Activation checkpointing</span>
+        <span class="skill-item">NVIDIA Warp / PhysicsNeMo</span>
+      </div>
+    </div>
+    <div class="skill-cell">
+      <div class="skill-head">HPC / Systems</div>
+      <div class="skill-items">
+        <span class="skill-item hi">C++ (modern)</span>
+        <span class="skill-item hi">MPI</span>
+        <span class="skill-item hi">SLURM / HPC clusters</span>
+        <span class="skill-item hi">Sparse linear solvers</span>
+        <span class="skill-item">Fortran</span>
+        <span class="skill-item">Python / NumPy / SciPy</span>
+        <span class="skill-item">CMake</span>
+        <span class="skill-item">PySpark / Pandas</span>
+      </div>
+    </div>
+    <div class="skill-cell">
+      <div class="skill-head">Hardware</div>
+      <div class="skill-items">
+        <span class="skill-item hi">Blackwell (B100/B200)</span>
+        <span class="skill-item hi">Hopper (H100)</span>
+        <span class="skill-item hi">GH200 Superchip</span>
+        <span class="skill-item hi">A100</span>
+        <span class="skill-item">L40s</span>
+        <span class="skill-item">Roofline analysis</span>
+        <span class="skill-item">Memory hierarchy opt.</span>
+        <span class="skill-item">Occupancy tuning</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="sec-label">Open Source</div>
+  <div class="projects-grid">
+
+    <a class="proj-card reveal" href="https://github.com/sushrutkr/blackwell_gemm_bench" target="_blank">
+      <div class="proj-tag">CUDA · Blackwell · Kernel Engineering</div>
+      <div class="proj-name">blackwell_gemm_bench</div>
+      <p class="proj-desc">
+        GEMM kernels for NVIDIA Blackwell written from scratch with CuTe and CUTLASS.
+        Explores warp specialization, Tensor Memory Accelerator (TMA), and persistent
+        kernel patterns. Built to understand what the hardware can actually do —
+        not just call cuBLAS.
+      </p>
+      <div class="proj-chips">
+        <span class="chip">CuTe</span><span class="chip">CUTLASS</span>
+        <span class="chip">Blackwell</span><span class="chip">TMA</span><span class="chip">CUDA C++</span>
+      </div>
+      <span class="proj-link">View on GitHub ↗</span>
+    </a>
+
+    <a class="proj-card reveal reveal-d1" href="https://github.com/sushrutkr/AeTHERON" target="_blank">
+      <div class="proj-tag">GNN · Neural Operator · ML Research</div>
+      <div class="proj-name">AeTHERON</div>
+      <p class="proj-desc">
+        Heterogeneous GNN-based neural simulator with sparse cross-attention and
+        autoregressive time-conditioning on unstructured meshes. Learns to predict
+        unsteady spatio-temporal fields from data — replacing hours of numerical
+        simulation with milliseconds of inference.
+      </p>
+      <div class="proj-chips">
+        <span class="chip">PyTorch Geometric</span><span class="chip">GNN</span>
+        <span class="chip">sparse attention</span><span class="chip">neural operator</span>
+      </div>
+      <span class="proj-link">View on GitHub ↗</span>
+    </a>
+
+    <a class="proj-card reveal reveal-d2" href="https://github.com/sushrutkr/ImmerseFlow" target="_blank">
+      <div class="proj-tag">CUDA · Multi-GPU · HPC Solver</div>
+      <div class="proj-name">ImmerseFlow++</div>
+      <p class="proj-desc">
+        Multi-GPU solver scaled to ~1 billion grid points with 90%+ efficiency.
+        Custom CUDA kernels for sparse linear algebra and geometry,
+        CUDA-aware MPI + NVSHMEM for inter-node communication,
+        Nsight-profiled throughout. Tested on A100, H100, GH200.
+      </p>
+      <div class="proj-chips">
+        <span class="chip">CUDA</span><span class="chip">MPI</span>
+        <span class="chip">NVSHMEM</span><span class="chip">C++</span><span class="chip">OpenACC</span>
+      </div>
+      <span class="proj-link">View on GitHub ↗</span>
+    </a>
+
+  </div>
+</section>
+
+<!-- RESEARCH -->
+<section id="research">
+  <div class="sec-label">Selected Publications</div>
+  <div class="pubs-list">
+
+    <div class="pub-row reveal">
+      <div class="pub-yr">2026</div>
+      <div>
+        <div class="pub-title">High-Performant Implementation of Sharp-Interface Immersed Boundary Method on Multi-GPU Clusters for Extreme-Scale Simulation with Moving Boundaries</div>
+        <div class="pub-venue">In preparation · Journal of Computational Physics</div>
+      </div>
+    </div>
+
+    <div class="pub-row reveal">
+      <div class="pub-yr">2026</div>
+      <div>
+        <div class="pub-title">GPU-Accelerated Simulations of Moving Boundary Problems and Fluid-Structure Interaction at Extreme Scales</div>
+        <div class="pub-venue">AIAA Aviation 2026 (Accepted)</div>
+      </div>
+    </div>
+
+    <div class="pub-row reveal">
+      <div class="pub-yr">2026</div>
+      <div>
+        <div class="pub-title">A GPU-Accelerated Sharp Interface Immersed Boundary Solver for Large Scale Flow Simulations</div>
+        <div class="pub-venue">AIAA SciTech 2026</div>
+      </div>
+    </div>
+
+    <div class="pub-row reveal">
+      <div class="pub-yr">2025</div>
+      <div>
+        <div class="pub-title">Freeman Scholar Lecture — Sharp-Interface Immersed Boundary Methods in Fluid Dynamics</div>
+        <div class="pub-venue">ASME Journal of Fluids Engineering, 147(3), 030801</div>
+      </div>
+    </div>
+
+    <div class="pub-row reveal">
+      <div class="pub-yr">2025</div>
+      <div>
+        <div class="pub-title">Computational Modelling and Analysis of the Coupled Aero-Structural Dynamics in Bat-Inspired Wings</div>
+        <div class="pub-venue">Journal of Fluid Mechanics, 1010, A53</div>
+      </div>
+    </div>
+
+    <div class="pub-row reveal">
+      <div class="pub-yr">2023</div>
+      <div>
+        <div class="pub-title">Force Moment Partitioning and Scaling Analysis of Vortices Shed by a 2D Pitching Wing in Quiescent Fluid</div>
+        <div class="pub-venue">Experiments in Fluids, 64, 158</div>
+      </div>
+    </div>
+
+    <div class="pub-row reveal">
+      <div class="pub-yr">2022</div>
+      <div>
+        <div class="pub-title">Contribution of Spanwise and Cross-Span Vortices to Lift Generation of Low-Aspect-Ratio Wings</div>
+        <div class="pub-venue">Physical Review Fluids, 7(11), 114102</div>
+      </div>
+    </div>
+
+    <div class="pub-row reveal">
+      <div class="pub-yr">2020</div>
+      <div>
+        <div class="pub-title">A Quantitative Analysis of Machine Learning Based Regressors for Pressure Reconstruction in Particle Image Velocimetry</div>
+        <div class="pub-venue">ASME Fluid Engineering Division Summer Meeting</div>
+      </div>
+    </div>
+
+  </div>
+  <a class="pub-see-all" href="https://scholar.google.co.in/citations?user=4nsdzjUAAAAJ&hl=en" target="_blank">
+    → All 13 publications on Google Scholar
+  </a>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="sec-label" style="justify-content:center; margin-bottom:2rem;">Contact</div>
+  <h2 class="contact-head reveal">Let's build something<br/><em>unreasonably fast.</em></h2>
+  <p class="contact-sub reveal">
+    Open to conversations about <strong>GPU performance, ML systems,</strong>
+    and research at the boundary of hardware and learning.
+  </p>
+  <div class="contact-row reveal">
+    <a class="btn btn-filled" href="mailto:skumar94@jhu.edu">skumar94@jhu.edu</a>
+    <a class="btn btn-outline" href="https://github.com/sushrutkr" target="_blank">GitHub</a>
+    <a class="btn btn-outline" href="https://www.linkedin.com/in/sushrutkr" target="_blank">LinkedIn</a>
+    <a class="btn btn-outline" href="https://scholar.google.co.in/citations?user=4nsdzjUAAAAJ&hl=en" target="_blank">Scholar</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Sushrut Kumar</p>
+  <p>Johns Hopkins PhD · NVIDIA Alumni · GTC 2026 · NVIDIA Academic Research Grant</p>
+</footer>
+
+<script>
+  // ── SCROLL REVEAL ──
+  const io = new IntersectionObserver(
+    entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); }),
+    { threshold: 0.08 }
+  );
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // ── THEME TOGGLE ──
+  const html       = document.documentElement;
+  const btn        = document.getElementById('themeToggle');
+  const icon       = document.getElementById('themeIcon');
+  const label      = document.getElementById('themeLabel');
+  const STORAGE_KEY = 'sk-theme';
+
+  function applyTheme(theme) {
+    html.setAttribute('data-theme', theme);
+    if (theme === 'dark') {
+      icon.textContent  = '☾';
+      label.textContent = 'Dark';
+    } else {
+      icon.textContent  = '☀';
+      label.textContent = 'Light';
+    }
+    localStorage.setItem(STORAGE_KEY, theme);
+  }
+
+  // Respect saved preference, then system preference
+  const saved  = localStorage.getItem(STORAGE_KEY);
+  const system = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  applyTheme(saved || system);
+
+  btn.addEventListener('click', () => {
+    const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    applyTheme(next);
+  });
+</script>
+
+</body>
 </html>
