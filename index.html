@@ -140,10 +140,29 @@
       opacity: 0; animation: fadeUp 0.7s 0.2s forwards;
     }
     h1.hero-name em { font-style: italic; color: var(--green); }
+    .hero-name-row {
+      display: flex; align-items: flex-end; justify-content: space-between;
+      gap: 2rem; margin-bottom: 0;
+    }
+    .hero-name-row h1.hero-name { margin-bottom: 0; }
+    .hero-photo {
+      width: clamp(140px, 16vw, 220px);
+      height: clamp(140px, 16vw, 220px);
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--border-hi);
+      flex-shrink: 0;
+      margin-bottom: 0.5rem;
+      opacity: 0; animation: fadeUp 0.7s 0.2s forwards;
+      filter: grayscale(20%);
+      transition: filter 0.3s;
+    }
+    .hero-photo:hover { filter: grayscale(0%); }
     .hero-bio {
       font-size: clamp(1rem, 1.6vw, 1.15rem);
       color: var(--muted); max-width: 680px;
-      line-height: 1.85; font-weight: 300; margin-bottom: 2.25rem;
+      line-height: 1.85; font-weight: 300;
+      margin-top: 1.75rem; margin-bottom: 2.25rem;
       opacity: 0; animation: fadeUp 0.7s 0.3s forwards;
     }
     .hero-bio strong { color: var(--text); font-weight: 500; }
@@ -504,7 +523,10 @@
 <!-- HERO -->
 <div id="hero">
   <div class="hero-kicker">GPU Performance &middot; ML Systems &middot; AI for Science</div>
-  <h1 class="hero-name">Sushrut<br/><em>Kumar</em></h1>
+  <div class="hero-name-row">
+    <h1 class="hero-name">Sushrut<br/><em>Kumar</em></h1>
+    <img class="hero-photo" src="https://raw.githubusercontent.com/sushrutkr/sushrutkr.github.io/main/images/sushrut.png" alt="Sushrut Kumar" />
+  </div>
   <p class="hero-bio">
     I work at the intersection of <strong>GPU systems and AI for science</strong> &mdash;
     writing CUDA kernels, training neural operators at scale,
@@ -518,7 +540,6 @@
   <div class="hero-actions">
     <a class="btn btn-filled" href="https://github.com/sushrutkr" target="_blank">&#8599; GitHub</a>
     <a class="btn btn-outline" href="https://scholar.google.co.in/citations?user=4nsdzjUAAAAJ&hl=en" target="_blank">Publications</a>
-    <a class="btn btn-outline" href="cv.html">CV</a>
     <a class="btn btn-outline" id="emailBtn" href="#">Email</a>
   </div>
 </div>
