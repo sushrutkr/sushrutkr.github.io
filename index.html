@@ -12,7 +12,7 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sushrut Kumar — GPU &amp; ML Systems Engineer</title>
+  <title>Sushrut Kumar — GPU &amp; ML Systems Researcher</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Fraunces:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -100,7 +100,6 @@
       transition: color 0.2s;
     }
     .nav-links a:hover { color: var(--text); }
-
     .theme-toggle {
       background: none; border: 1px solid var(--border-hi);
       border-radius: 100px; cursor: pointer;
@@ -109,8 +108,8 @@
       transition: border-color 0.2s, background 0.2s;
     }
     .theme-toggle:hover { border-color: var(--green); background: var(--bg2); }
-    .theme-toggle .t-icon { font-size: 0.8rem; line-height: 1; }
-    .theme-toggle .t-label {
+    .t-icon { font-size: 0.8rem; line-height: 1; }
+    .t-label {
       font-family: var(--mono); font-size: 0.62rem;
       color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase;
     }
@@ -143,8 +142,8 @@
     h1.hero-name em { font-style: italic; color: var(--green); }
     .hero-bio {
       font-size: clamp(1rem, 1.6vw, 1.15rem);
-      color: var(--muted); max-width: 640px;
-      line-height: 1.8; font-weight: 300; margin-bottom: 2.25rem;
+      color: var(--muted); max-width: 680px;
+      line-height: 1.85; font-weight: 300; margin-bottom: 2.25rem;
       opacity: 0; animation: fadeUp 0.7s 0.3s forwards;
     }
     .hero-bio strong { color: var(--text); font-weight: 500; }
@@ -205,12 +204,19 @@
     /* ABOUT */
     .about-layout { display: grid; grid-template-columns: 3fr 2fr; gap: 5rem; align-items: start; }
     .about-copy p {
-      font-size: 1.02rem; font-weight: 300;
-      color: var(--text); line-height: 1.85; margin-bottom: 1.3rem;
+      font-size: 1.05rem; font-weight: 300;
+      color: var(--text); line-height: 1.9; margin-bottom: 1.4rem;
     }
     .about-copy p:last-child { margin-bottom: 0; }
     .about-copy strong { color: var(--green); font-weight: 500; }
     .about-copy em { color: var(--teal); font-style: normal; }
+    /* scientist tone: pull-quote style for key insight */
+    .about-copy .insight {
+      font-family: var(--serif); font-size: 1.15rem; font-style: italic;
+      color: var(--text); border-left: 3px solid var(--green);
+      padding-left: 1.25rem; margin: 1.75rem 0;
+      line-height: 1.7;
+    }
     .about-aside { display: flex; flex-direction: column; gap: 1.2rem; }
     .stat-tile {
       border: 1px solid var(--border); border-radius: 8px;
@@ -323,6 +329,86 @@
     }
     .proj-card:hover .proj-link { opacity: 1; }
 
+    /* ── RESEARCH HIGHLIGHTS ── */
+    .highlights-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    /* full-width first card */
+    .highlight-card {
+      background: var(--bg2);
+      display: flex; flex-direction: column;
+      transition: background 0.2s;
+    }
+    .highlight-card:hover { background: var(--bg3); }
+    .highlight-card.full { grid-column: 1 / -1; flex-direction: row; }
+
+    /* media area — where you drop an image or video */
+    .hl-media {
+      background: var(--bg3);
+      display: flex; align-items: center; justify-content: center;
+      overflow: hidden; flex-shrink: 0;
+    }
+    .highlight-card.full .hl-media {
+      width: 55%; min-height: 300px;
+    }
+    .highlight-card:not(.full) .hl-media {
+      width: 100%; height: 220px;
+    }
+    .hl-media img,
+    .hl-media video,
+    .hl-media iframe {
+      width: 100%; height: 100%; object-fit: cover; display: block; border: none;
+    }
+    /* placeholder shown when no media is provided */
+    .hl-placeholder {
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      width: 100%; height: 100%;
+      color: var(--dim);
+      gap: 0.6rem;
+      padding: 2rem;
+      text-align: center;
+    }
+    .hl-placeholder .pl-icon {
+      font-size: 2rem; opacity: 0.4;
+    }
+    .hl-placeholder .pl-text {
+      font-family: var(--mono); font-size: 0.65rem;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      opacity: 0.5; line-height: 1.6;
+    }
+
+    /* text area */
+    .hl-body { padding: 1.75rem 2rem; flex: 1; }
+    .highlight-card.full .hl-body { display: flex; flex-direction: column; justify-content: center; }
+
+    .hl-tag {
+      font-family: var(--mono); font-size: 0.62rem;
+      color: var(--amber); letter-spacing: 0.1em;
+      text-transform: uppercase; margin-bottom: 0.6rem;
+    }
+    .hl-title {
+      font-family: var(--serif); font-size: 1.2rem;
+      font-weight: 300; line-height: 1.25; margin-bottom: 0.75rem;
+    }
+    .highlight-card.full .hl-title { font-size: 1.45rem; }
+    .hl-desc {
+      font-size: 0.875rem; color: var(--muted); line-height: 1.75; margin-bottom: 1rem;
+    }
+    .hl-finding {
+      font-family: var(--serif); font-size: 0.9rem; font-style: italic;
+      color: var(--text); border-left: 2px solid var(--green);
+      padding-left: 0.85rem; line-height: 1.6; margin-bottom: 1rem;
+    }
+    .hl-chips { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+
     /* PUBLICATIONS */
     .pubs-list { display: flex; flex-direction: column; }
     .pub-row {
@@ -377,6 +463,9 @@
       .projects-grid { grid-template-columns: 1fr 1fr; }
       .skills-matrix { grid-template-columns: 1fr 1fr; }
       .tl-item { grid-template-columns: 90px 1fr; gap: 1rem; }
+      .highlights-grid { grid-template-columns: 1fr; }
+      .highlight-card.full { flex-direction: column; }
+      .highlight-card.full .hl-media { width: 100%; min-height: 220px; }
     }
     @media (max-width: 640px) {
       nav { padding: 1rem 1.25rem; }
@@ -393,16 +482,17 @@
 </head>
 <body>
 
+<!-- NAV -->
 <nav>
   <div class="nav-left">
     <a class="nav-mark" href="#hero">SK /</a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
-      <li><a href="#work">Work</a></li>
+      <li><a href="#work">Experience</a></li>
       <li><a href="#stack">Stack</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#research">Research</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#projects">Open Source</a></li>
+      <li><a href="#highlights">Research</a></li>
+      <li><a href="#publications">Papers</a></li>
     </ul>
   </div>
   <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
@@ -411,14 +501,15 @@
   </button>
 </nav>
 
+<!-- HERO -->
 <div id="hero">
-  <div class="hero-kicker">GPU Performance &middot; ML Systems &middot; PhD, Johns Hopkins</div>
+  <div class="hero-kicker">GPU Performance &middot; ML Systems &middot; AI for Science</div>
   <h1 class="hero-name">Sushrut<br/><em>Kumar</em></h1>
   <p class="hero-bio">
-    I write <strong>CUDA kernels</strong>, build <strong>ML training infrastructure</strong>,
-    and design <strong>neural operators</strong> that replace classical solvers at scale.
-    My work lives close to the hardware &mdash;
-    from <em>Blackwell GEMM kernels</em> to distributed training on GPU clusters.
+    I work at the intersection of <strong>GPU systems and AI for science</strong> &mdash;
+    writing CUDA kernels, training neural operators at scale,
+    and building infrastructure that makes <em>hard simulations tractable</em>.
+    My work lives close to the hardware.
   </p>
   <div class="hero-pill">
     <span class="dot"></span>
@@ -427,10 +518,12 @@
   <div class="hero-actions">
     <a class="btn btn-filled" href="https://github.com/sushrutkr" target="_blank">&#8599; GitHub</a>
     <a class="btn btn-outline" href="https://scholar.google.co.in/citations?user=4nsdzjUAAAAJ&hl=en" target="_blank">Publications</a>
+    <a class="btn btn-outline" href="cv.html">CV</a>
     <a class="btn btn-outline" id="emailBtn" href="#">Email</a>
   </div>
 </div>
 
+<!-- 1. ABOUT -->
 <section id="about">
   <div class="sec-label">About</div>
   <div class="about-layout">
@@ -451,10 +544,20 @@
         with <strong>inference at 5000&times; the speed</strong>, contributing to 5 US patents.
       </p>
       <p>
-        Alongside that, I've gone deep on kernel engineering: writing
-        <strong>Blackwell GEMM kernels from scratch</strong> with CuTe and CUTLASS,
-        profiling with Nsight at the warp level, and building multi-GPU solvers
-        that scale to <em>1 billion grid points</em> with 90%+ efficiency.
+        My PhD work took me even deeper into the hardware. I took a
+        <strong>30-year-old, 75,000-line CFD solver</strong> and rebuilt it
+        end-to-end for modern GPU clusters &mdash; writing CUDA kernels for sparse
+        linear solvers, ray tracing, and geometric computations; scaling inter-node
+        communication with CUDA-aware MPI, NCCL, and NVSHMEM; and profiling
+        exhaustively with Nsight to reach <em>90%+ weak and strong scaling efficiency</em>
+        across 1 billion grid points on L40s, A100, H100, and GH200 nodes.
+        That work produced a <strong>500&times; end-to-end speedup</strong> over the CPU baseline
+        and a formal collaboration with NVIDIA.
+      </p>
+      <p>
+        That foundation in low-level GPU systems also led to kernel research:
+        writing <strong>Blackwell GEMM kernels from scratch</strong> with CuTe and CUTLASS,
+        exploring warp specialization and Tensor Memory Accelerator patterns.
         I think in memory hierarchies and compute rooflines.
       </p>
       <p>
@@ -474,7 +577,7 @@
       </div>
       <div class="stat-tile">
         <div class="stat-n teal">1B</div>
-        <div class="stat-d">Grid points &middot; multi-GPU solver at 90%+ scaling efficiency</div>
+        <div class="stat-d">Grid points &middot; multi-GPU solver, 90%+ scaling efficiency</div>
       </div>
       <div class="stat-tile">
         <div class="stat-n amber">13</div>
@@ -488,6 +591,7 @@
   </div>
 </section>
 
+<!-- 2. EXPERIENCE -->
 <section id="work">
   <div class="sec-label">Experience</div>
   <div class="timeline">
@@ -507,8 +611,7 @@
           and activation checkpointing. Built GPU-accelerated data pipelines
           in NVIDIA Warp to process 1 TB of training data.
           <div class="result-strip">
-            <strong>&#8594; 5000&times; inference speedup</strong> vs. classical solvers &middot;
-            5 US patents filed &middot; Presented at NVIDIA GTC 2026, San Jose
+            <strong>&#8594; 5000&times; inference speedup</strong> vs. classical solvers &middot; 5 US patents filed
           </div>
         </div>
         <div class="tl-chips">
@@ -528,21 +631,21 @@
         <div class="tl-role">Doctoral Researcher &mdash; GPU Systems &amp; ML</div>
         <div class="tl-body">
           Two parallel workstreams over five years.<br/><br/>
-          <strong>GPU kernel &amp; systems engineering:</strong> Took a 75,000-line
-          legacy solver and built it into a production multi-GPU codebase.
-          Wrote CUDA kernels for sparse linear solvers (BiCGStab + preconditioner),
-          ray tracing, and geometric computations. Inter-node communication via
-          CUDA-aware MPI, NCCL, and NVSHMEM. Profiled with Nsight Systems and
-          Nsight Compute to reach <em>90%+ weak and strong scaling efficiency</em>
-          across 1 billion grid points. Tested on L40s, A100, H100, GH200 Superchip.
+          <strong>GPU kernel &amp; systems engineering:</strong> Rewrote a 75,000-line
+          legacy solver end-to-end for modern multi-GPU clusters. CUDA kernels
+          for sparse linear solvers (BiCGStab + preconditioner), ray tracing, and
+          geometric computations. Inter-node communication via CUDA-aware MPI, NCCL,
+          and NVSHMEM. Nsight-profiled throughout &mdash; occupancy, memory bandwidth,
+          warp divergence &mdash; to reach <em>90%+ scaling efficiency</em> at 1B grid points.
+          Tested on L40s, A100, H100, GH200 Superchip.
           <div class="result-strip">
-            <strong>&#8594; 500&times; total speedup:</strong> 10&times; new numerical methods + 25&times; GPU acceleration + 2&times; algorithmic improvements
+            <strong>&#8594; 500&times; total speedup:</strong> 10&times; new numerical methods + 25&times; GPU acceleration + 2&times; algorithmic improvements &middot; Presented at NVIDIA GTC 2026, San Jose
           </div>
           <br/>
           <strong>ML research:</strong> Built <em>AeTHERON</em> &mdash; a heterogeneous GNN
-          neural simulator with sparse cross-attention and autoregressive
-          time-conditioning for unsteady spatio-temporal prediction on unstructured meshes.
-          Analyzed &gt;40 TB of 4D time-series output across 3 journal papers.
+          neural simulator with sparse cross-attention and autoregressive time-conditioning
+          for unsteady spatio-temporal prediction on unstructured meshes.
+          Analyzed &gt;40 TB of 4D simulation data across 3 journal papers.
         </div>
         <div class="tl-chips">
           <span class="chip">CUDA C++</span><span class="chip">OpenACC</span>
@@ -587,10 +690,10 @@
         </div>
       </div>
     </div>
-
   </div>
 </section>
 
+<!-- 3. TECHNICAL STACK -->
 <section id="stack">
   <div class="sec-label">Technical Stack</div>
   <div class="skills-matrix reveal">
@@ -650,6 +753,7 @@
   </div>
 </section>
 
+<!-- 4. OPEN SOURCE -->
 <section id="projects">
   <div class="sec-label">Open Source</div>
   <div class="projects-grid">
@@ -686,7 +790,111 @@
   </div>
 </section>
 
-<section id="research">
+<!-- 5. RESEARCH HIGHLIGHTS -->
+<section id="highlights">
+  <div class="sec-label">Research Highlights</div>
+  <div class="highlights-grid">
+
+    <!-- CARD 1: Full width — your biggest/most visual result -->
+    <!-- TO CUSTOMIZE: Replace the placeholder div inside .hl-media with:
+         Image:  <img src="your-image.png" alt="description" />
+         Video:  <video src="your-video.mp4" autoplay muted loop playsinline></video>
+         YouTube: <iframe src="https://www.youtube.com/embed/VIDEO_ID?autoplay=1&mute=1&loop=1" allowfullscreen></iframe>
+    -->
+    <div class="highlight-card full reveal">
+      <div class="hl-media">
+        <div class="hl-placeholder">
+          <div class="pl-icon">&#9654;</div>
+          <div class="pl-text">Add your neural operator<br/>inference demo here<br/>(image or video)</div>
+        </div>
+      </div>
+      <div class="hl-body">
+        <div class="hl-tag">Neural Operators &middot; NVIDIA &middot; 2024&ndash;2025</div>
+        <div class="hl-title">Hybrid Graph-Fourier Neural Operator for Real-Time Physical State Reconstruction</div>
+        <div class="hl-desc">
+          Classical physics solvers discretize space and time, integrating equations
+          forward step by step &mdash; computationally expensive by design.
+          We asked: can a neural network learn the mapping from sparse sensor observations
+          to full physical fields, end-to-end, fast enough for real-time deployment
+          inside an AI factory?
+        </div>
+        <div class="hl-finding">
+          By fusing Graph Neural Operators (for unstructured sensor graphs) with
+          3D Fourier Neural Operators (for global field reconstruction), we achieved
+          5000&times; inference speedup over the classical baseline &mdash; with accuracy
+          sufficient for production digital twin deployment.
+        </div>
+        <div class="hl-chips">
+          <span class="chip">GNO</span><span class="chip">FNO</span>
+          <span class="chip">PyTorch</span><span class="chip">DDP</span>
+          <span class="chip">8&times;A100</span><span class="chip">5 patents</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 2: Half width -->
+    <!-- TO CUSTOMIZE: Replace placeholder with your GPU profiling screenshot,
+         roofline plot, or scaling chart -->
+    <div class="highlight-card reveal">
+      <div class="hl-media">
+        <div class="hl-placeholder">
+          <div class="pl-icon">&#9636;</div>
+          <div class="pl-text">Add Nsight profiling screenshot<br/>or roofline plot here</div>
+        </div>
+      </div>
+      <div class="hl-body">
+        <div class="hl-tag">GPU Kernel Engineering &middot; Johns Hopkins &middot; 2021&ndash;2026</div>
+        <div class="hl-title">Extreme-Scale Multi-GPU Solver at 90%+ Efficiency</div>
+        <div class="hl-desc">
+          Starting from a 75,000-line legacy codebase, we rebuilt a
+          high-performance immersed boundary solver for modern GPU clusters &mdash;
+          custom CUDA kernels, NVSHMEM communication, and Nsight-guided
+          optimization at the warp level.
+        </div>
+        <div class="hl-finding">
+          500&times; end-to-end speedup. 90%+ weak and strong scaling to 1 billion grid points across H100 and GH200 nodes.
+        </div>
+        <div class="hl-chips">
+          <span class="chip">CUDA</span><span class="chip">NVSHMEM</span>
+          <span class="chip">H100</span><span class="chip">GH200</span><span class="chip">Nsight</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 3: Half width -->
+    <!-- TO CUSTOMIZE: Replace placeholder with AeTHERON architecture diagram,
+         training curves, or a prediction vs. ground truth comparison -->
+    <div class="highlight-card reveal reveal-d1">
+      <div class="hl-media">
+        <div class="hl-placeholder">
+          <div class="pl-icon">&#9636;</div>
+          <div class="pl-text">Add AeTHERON architecture<br/>diagram or prediction results</div>
+        </div>
+      </div>
+      <div class="hl-body">
+        <div class="hl-tag">GNN &middot; Neural Simulator &middot; ML Research</div>
+        <div class="hl-title">AeTHERON: Autoregressive GNN Simulator on Unstructured Meshes</div>
+        <div class="hl-desc">
+          Unstructured mesh problems &mdash; where geometry is complex and irregular &mdash;
+          are where classical neural PDE solvers struggle most.
+          AeTHERON uses heterogeneous graph attention with autoregressive
+          time-conditioning to roll out stable long-horizon predictions.
+        </div>
+        <div class="hl-finding">
+          Stable multi-step rollout on unstructured meshes where standard GNNs diverge within a few steps.
+        </div>
+        <div class="hl-chips">
+          <span class="chip">PyTorch Geometric</span><span class="chip">sparse attention</span>
+          <span class="chip">GNN</span><span class="chip">autoregressive</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 6. SELECTED PUBLICATIONS -->
+<section id="publications">
   <div class="sec-label">Selected Publications</div>
   <div class="pubs-list">
     <div class="pub-row reveal">
@@ -751,6 +959,7 @@
   </a>
 </section>
 
+<!-- CONTACT -->
 <section id="contact">
   <div class="sec-label" style="justify-content:center; margin-bottom:2rem;">Contact</div>
   <h2 class="contact-head reveal">Let's build something<br/><em>unreasonably fast.</em></h2>
@@ -772,27 +981,21 @@
 </footer>
 
 <script>
-  // Email obfuscated to prevent Cloudflare rewriting the file
-  var u = 'skumar94';
-  var d = 'jhu.edu';
-  var addr = u + '@' + d;
-  var link = 'mailto:' + addr;
-  var els = document.querySelectorAll('#emailBtn, #emailBtn2');
-  els.forEach(function(el) { el.href = link; el.textContent = el.id === 'emailBtn' ? addr : 'Email me'; });
+  var u = 'skumar94', d = 'jhu.edu', addr = u + '@' + d;
+  document.querySelectorAll('#emailBtn, #emailBtn2').forEach(function(el) {
+    el.href = 'mailto:' + addr;
+    if (el.id === 'emailBtn') el.textContent = addr;
+  });
 
-  // Scroll reveal
-  var reveals = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {
     var io = new IntersectionObserver(function(entries) {
       entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('in'); });
     }, { threshold: 0.05, rootMargin: '0px 0px -40px 0px' });
-    reveals.forEach(function(el) { io.observe(el); });
+    document.querySelectorAll('.reveal').forEach(function(el) { io.observe(el); });
   } else {
-    // Fallback for old browsers
-    reveals.forEach(function(el) { el.classList.add('in'); });
+    document.querySelectorAll('.reveal').forEach(function(el) { el.classList.add('in'); });
   }
 
-  // Theme toggle
   var html = document.documentElement;
   var btn  = document.getElementById('themeToggle');
   var icon = document.getElementById('themeIcon');
